@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 import inquirer from "inquirer";
-import fs from "fs";
+// import fs from "fs";
+import { writeFile } from "fs";
 import generateMarkdown from "./utils/generateMarkdown.js";
 console.log(
   "Welcome to the automated README generator! Answer the following questions to create a README for your project."
@@ -66,13 +67,20 @@ const questions = [
   },
 ];
 
-// TODO: Create a function to initialize app
+function makeReadme(fileName, data) {
+  writeFile(fileName, data, (err) =>
+    err ? console.log(err) : console.log("README Created!")
+  );
+}
+
 function init() {
-  inquirer.prompt(questions).then((data) => {
-    fs.writeFile("README", generateMarkdown(data), (err) =>
-      err ? console.log(err) : console.log("README Created!")
-    );
-  });
+  inquirer
+    .prompt(questions)
+    .then((data) => {
+      const response = generateMarkdown(data);
+      makeReadme("README.md", response);
+    })
+    .catch((err) => console.log(err));
 }
 
 // Function call to initialize app
