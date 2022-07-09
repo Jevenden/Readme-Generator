@@ -34,7 +34,7 @@ First I imported the necessary dependencies, then created an array of questions 
 and initialize the application. Moving over to the generate markdown file, I imported the data from the user's input and rendered it as a README and created 
 the function to generate the license badges and links. Finally, I recored a video with Screencastify to highlight how the project funtiions.
 
-URL of deployed application: https://jevenden.github.io/Weather-Tracker-Challenge/
+URL of deployed application: https://jevenden.github.io/Readme-Generator/
 
 ![Readme SS](https://user-images.githubusercontent.com/102879070/178124011-5626ca8a-83b7-4871-8f0d-d908cc622e08.png)
 
