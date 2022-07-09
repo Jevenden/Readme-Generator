@@ -18,16 +18,16 @@
   Demo Install
 
   ## Usage
-  Demo Use
+  Demo U{se
 
   ## License
-  
+  MPL 2.0
 
-  
+  ![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)
 
-  This app is licensed under the  License. 
+  This app is licensed under the MPL 2.0 License. 
   
-  Please click () for more info.
+  Please click (https://opensource.org/licenses/MPL-2.0) for more info.
 
   ## Features
   Demo Features
