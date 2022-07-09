@@ -36,4 +36,5 @@ the function to generate the license badges and links. Finally, I recored a vide
 
 URL of deployed application: https://jevenden.github.io/Weather-Tracker-Challenge/
 
-![screenshot](https://user-images.githubusercontent.com/102879070/173206795-1756b534-81cb-41fe-a26f-bf9e9cd7594d.jpg)
+![Readme SS](https://user-images.githubusercontent.com/102879070/178124011-5626ca8a-83b7-4871-8f0d-d908cc622e08.png)
+
