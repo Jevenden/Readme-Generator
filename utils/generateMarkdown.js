@@ -3,13 +3,13 @@ export default generateMarkdown;
 function renderLicenses(license) {
   if (license.name === "MPL 2.0") {
     license.link = "https://opensource.org/licenses/MPL-2.0";
-    license.badge = `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](${license.link})`;
+    license.badge = `![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)`;
   } else if (license.name === "MIT") {
     license.link = "https://opensource.org/licenses/MIT";
-    license.badge = `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](${license.link})`;
+    license.badge = `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]`;
   } else if (license.name === "Apache 2.0") {
     license.link = "https://opensource.org/licenses/Apache-2.0";
-    license.badge = `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](${license.link})`;
+    license.badge = `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)]`;
   }
 }
 
@@ -44,9 +44,9 @@ function generateMarkdown(data) {
   ${data.use}
 
   ## License
-  ### ${license.name}
+  ${license.name}
   ${license.badge}
-  This app is licensed under the ${license.name} License. Please click [HERE](${license.link}) for more info.
+  This app is licensed under the ${license.name} License. Please click (${license.link}) for more info.
 
   ## Features
   ${data.features}
