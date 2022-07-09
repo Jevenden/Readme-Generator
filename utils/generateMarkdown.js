@@ -45,8 +45,12 @@ function generateMarkdown(data) {
 
   ## License
   ${license.name}
+
   ${license.badge}
-  This app is licensed under the ${license.name} License. Please click (${license.link}) for more info.
+
+  This app is licensed under the ${license.name} License. 
+  
+  Please click (${license.link}) for more info.
 
   ## Features
   ${data.features}
