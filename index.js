@@ -29,10 +29,10 @@ const questions = [
     name: "use",
   },
   {
-    type: "list",
+    type: "checkbox",
     message: "Choose a license that will best suit the project:",
     name: "license",
-    choices: ["MPL 2.0", "MIT", "Apache", , "None of the Above"],
+    choices: ["MPL 2.0", "MIT", "Apache", , "None"],
   },
   {
     type: "input",

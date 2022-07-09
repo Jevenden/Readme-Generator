@@ -10,6 +10,9 @@ function renderLicenses(license) {
   } else if (license.name === "Apache 2.0") {
     license.link = "https://opensource.org/licenses/Apache-2.0";
     license.badge = `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)]`;
+  } else {
+    license.link = "";
+    license.badge = "";
   }
 }
 
@@ -35,7 +38,7 @@ function generateMarkdown(data) {
   -[Features](#features)
   -[Contributing](#contribute)
   -[Test](#testing)
-  -[Information](#info)
+  -[Information](#information)
 
   ## Installation
   ${data.installation}
@@ -63,7 +66,9 @@ function generateMarkdown(data) {
 
   ## Information
   ${data.github}
+
   ${data.email}
+  
   ${data.name}
   `;
 }
