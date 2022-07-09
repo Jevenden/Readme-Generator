@@ -1,6 +1,5 @@
 // TODO: Include packages needed for this application
 import inquirer from "inquirer";
-// import fs from "fs";
 import { writeFile } from "fs";
 import generateMarkdown from "./utils/generateMarkdown.js";
 console.log(
@@ -30,10 +29,10 @@ const questions = [
     name: "use",
   },
   {
-    type: "checkbox",
+    type: "list",
     message: "Choose a license that will best suit the project:",
     name: "license",
-    choices: ["MPL 2.0", "GNL", "Apache", "MIT", "None of the Above"],
+    choices: ["MPL 2.0", "MIT", "Apache", , "None of the Above"],
   },
   {
     type: "input",
@@ -67,9 +66,13 @@ const questions = [
   },
 ];
 
-function makeReadme(fileName, data) {
-  writeFile(fileName, data, (err) =>
-    err ? console.log(err) : console.log("README Created!")
+function makeReadme(data) {
+  writeFile("./completed READMEs/README.md", data, (err) =>
+    err
+      ? console.log(err)
+      : console.log(
+          "Success! Your README can be found in the Completed READMEs folder!"
+        )
   );
 }
 
@@ -78,7 +81,7 @@ function init() {
     .prompt(questions)
     .then((data) => {
       const response = generateMarkdown(data);
-      makeReadme("README.md", response);
+      makeReadme(response);
     })
     .catch((err) => console.log(err));
 }
